@@ -6,22 +6,29 @@ from pathlib import Path
 from typing import Any
 import base64
 import os
-from house_reg import logger
+from src.house_reg import logger
 import yaml
 
 @ensure_annotations
-def read_yaml(path:Path)->ConfigBox:
-    '''reads yaml file
+def read_yaml(path_to_yaml:Path)-> ConfigBox:
+
+    '''reads yaml file and returns
+
     Args:
-        path: path of Yaml
-        
+        path_to_yaml(str):path like input
+    
+    Raises:
+        ValueError : if yaml file is empty
+        e : empty file
+
     Returns:
-        ConfigBox
-            '''
+        ConfigBox: ConfigBox type
+
+    '''
     try:
-        with open(path) as yaml_file:
+        with open(path_to_yaml) as yaml_file:
             content=yaml.safe_load(yaml_file)
-            logger.info(f"yaml file:{path} loaded successfully")
+            logger.info(f"yaml file:{path_to_yaml} loaded successfully")
             return ConfigBox(content)
     
     except BoxValueError:
