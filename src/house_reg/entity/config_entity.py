@@ -8,3 +8,8 @@ class DataIngestionConfig:
     source_url: Path
     local_data_file: Path
     unzip_dir: Path
+
+@dataclass(frozen=True)
+class PrepareTrainModelConfig:
+    root_dir: Path
+    base_model_path:Path

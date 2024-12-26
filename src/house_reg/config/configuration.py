@@ -1,7 +1,8 @@
 from src.house_reg._utils.common import read_yaml,create_directories
 from src.house_reg.constant import *
-from src.house_reg.entity.config_entity import DataIngestionConfig
-
+from src.house_reg.entity.config_entity import (DataIngestionConfig,PrepareTrainModelConfig)
+import os
+                                                
 class ConfigurationManager:
     def __init__(self, config_file_path=CONFIG_PATH, params_file_path=PARAMS_PATH):
         self.config = read_yaml(config_file_path)
@@ -18,6 +19,17 @@ class ConfigurationManager:
             unzip_dir=Path(config.unzip_dir)
         )
         return dataingestionconfig
+
+    def get_train_model_config(self)->PrepareTrainModelConfig:
+        config=self.config.prepare_base_model
+        os.makedirs(config.root_dir,exist_ok=True)
+
+        prepare_train_model=PrepareTrainModelConfig(
+            root_dir=Path(config.root_dir),
+            base_model_path=Path(config.base_model_path)
+        )
+
+        return prepare_train_model
     
     
     
