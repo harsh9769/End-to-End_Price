@@ -37,6 +37,10 @@ class PrepareTrainModel:
         # Evaluate the model
         #print("Training R^2 Score:", reg.score(X_train, y_train))
         #print("Testing R^2 Score:", reg.score(X_test, y_test))
+        with open('artifacts\prepare_base_model\X_test.pkl', 'wb') as f:
+            pickle.dump(X_test, f)
+        with open('artifacts\prepare_base_model\y_test.pkl', 'wb') as f:
+            pickle.dump(y_test, f)
         with open(str(self.config.base_model_path),'wb') as f:
             pickle.dump(reg,f)
 

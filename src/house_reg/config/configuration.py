@@ -1,6 +1,6 @@
 from src.house_reg._utils.common import read_yaml,create_directories
 from src.house_reg.constant import *
-from src.house_reg.entity.config_entity import (DataIngestionConfig,PrepareTrainModelConfig)
+from src.house_reg.entity.config_entity import (DataIngestionConfig,PrepareTrainModelConfig,EvaluationConfig)
 import os
                                                 
 class ConfigurationManager:
@@ -30,6 +30,15 @@ class ConfigurationManager:
         )
 
         return prepare_train_model
+    
+    def get_evaluation_config(self)-> EvaluationConfig:
+
+        eval_config=EvaluationConfig(
+            path_of_model="artifacts\prepare_base_model\model.pkl",
+            training_data="artifacts\data_ingestion\Housing.csv",
+            mlflow_uri="https://dagshub.com/harsh9769/End-to-End_Price.mlflow")
+        
+        return eval_config
     
     
     

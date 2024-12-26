@@ -14,6 +14,18 @@ Update the pipeline
 Update the main.py
 Update the dvc.yaml
 
+
+## mlflow setup
+
+import dagshub
+dagshub.init(repo_owner='harsh9769', repo_name='End-to-End_Price', mlflow=True)
+
+import mlflow
+with mlflow.start_run():
+  mlflow.log_param('parameter name', 'value')
+  mlflow.log_metric('metric name', 1)
+
+
 ## AWS-CICD-Deployment-with-Github-Actions
 1. Login to AWS console.
 2. Create IAM user for deployment

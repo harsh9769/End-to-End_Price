@@ -13,3 +13,10 @@ class DataIngestionConfig:
 class PrepareTrainModelConfig:
     root_dir: Path
     base_model_path:Path
+
+from dataclasses import dataclass
+@dataclass(frozen=True)
+class EvaluationConfig:
+    path_of_model: Path
+    training_data: Path
+    mlflow_uri: str
