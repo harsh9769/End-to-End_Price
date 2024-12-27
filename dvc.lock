@@ -16,3 +16,35 @@ stages:
       hash: md5
       md5: 0277f105b17cabd5defaa63b4896e00a
       size: 4740
+  prepare_train_model:
+    cmd: python src\house_reg\pipelines\stage_02_prepare_train_model.py
+    deps:
+    - path: config\config.yaml
+      hash: md5
+      md5: d0ad291679b125805ceec7fe04a31302
+      size: 405
+    - path: src\house_reg\pipelines\stage_02_prepare_train_model.py
+      hash: md5
+      md5: b5020a0858672d4f532ed05752b8979f
+      size: 872
+    outs:
+    - path: artifacts\prepare_base_model\model.pkl
+      hash: md5
+      md5: b92923ee87781ad62a3c2168d41a3cef
+      size: 832
+  model_evaluation:
+    cmd: python src\house_reg\pipelines\stage_03_model_evaluation.py
+    deps:
+    - path: config\config.yaml
+      hash: md5
+      md5: d0ad291679b125805ceec7fe04a31302
+      size: 405
+    - path: src\house_reg\pipelines\stage_03_model_evaluation.py
+      hash: md5
+      md5: 32473f350b9e5ebfd48cbd070e593e45
+      size: 823
+    outs:
+    - path: scores.json
+      hash: md5
+      md5: 79843707c856fc043cd44ab40a65624f
+      size: 29

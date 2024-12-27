@@ -1,6 +1,6 @@
-from src.house_reg.components.model_evaluation import Evaluation
-from src.house_reg.config.configuration import ConfigurationManager
-from src.house_reg import logger
+from house_reg.components.model_evaluation import Evaluation
+from house_reg.config.configuration import ConfigurationManager
+from house_reg import logger
 
 STAGE_NAME="Model Evaluation"
 
