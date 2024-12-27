@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import Any
 import base64
 import os
-from src.house_reg import logger
+from house_reg import logger
 import yaml
 
 @ensure_annotations

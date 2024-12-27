@@ -1,6 +1,6 @@
-from src.house_reg.config.configuration import ConfigurationManager
-from src.house_reg.components.data_ingestion import DataIngestion
-from src.house_reg import logger
+from house_reg.config.configuration import ConfigurationManager
+from house_reg.components.data_ingestion import DataIngestion
+from house_reg import logger
 
 STAGE_NAME="Data Ingestion"
 

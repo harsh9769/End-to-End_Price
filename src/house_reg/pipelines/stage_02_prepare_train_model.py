@@ -1,6 +1,6 @@
-from src.house_reg.components.prepare_train_model import PrepareTrainModel
-from src.house_reg.config.configuration import ConfigurationManager
-from src.house_reg import logger
+from house_reg.components.prepare_train_model import PrepareTrainModel
+from house_reg.config.configuration import ConfigurationManager
+from house_reg import logger
 
 STAGE_NAME="Prepare Train Model"
 

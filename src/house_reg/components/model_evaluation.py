@@ -4,7 +4,7 @@ import mlflow
 import dagshub
 from urllib.parse import urlparse
 import json
-from src.house_reg.config.configuration import EvaluationConfig
+from house_reg.config.configuration import EvaluationConfig
 
 
 class Evaluation:

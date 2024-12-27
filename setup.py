@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "End-to-End_Price"
 AUTHOR_USER_NAME = "harsh9769"
-SRC_REPO = "cnnClassifier"
+SRC_REPO = "house_reg"
 AUTHOR_EMAIL = "dalviharsh976@gmail.com"
 
 

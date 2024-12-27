@@ -1,8 +1,8 @@
 import gdown
 import zipfile
-from src.house_reg import logger
+from house_reg import logger
 import os
-from src.house_reg.config.configuration import DataIngestionConfig
+from house_reg.config.configuration import DataIngestionConfig
 
 
 class DataIngestion:

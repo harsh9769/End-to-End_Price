@@ -1,6 +1,6 @@
-from src.house_reg._utils.common import read_yaml,create_directories
-from src.house_reg.constant import *
-from src.house_reg.entity.config_entity import (DataIngestionConfig,PrepareTrainModelConfig,EvaluationConfig)
+from house_reg._utils.common import read_yaml,create_directories
+from house_reg.constant import *
+from house_reg.entity.config_entity import (DataIngestionConfig,PrepareTrainModelConfig,EvaluationConfig)
 import os
                                                 
 class ConfigurationManager:

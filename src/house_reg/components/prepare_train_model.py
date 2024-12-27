@@ -5,7 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model._base import LinearRegression
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from src.house_reg.config.configuration import PrepareTrainModelConfig
+from house_reg.config.configuration import PrepareTrainModelConfig
 
 
 class PrepareTrainModel:
